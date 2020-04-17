@@ -8,7 +8,7 @@ namespace DNS.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Movie",
+                name: "Ppl",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -21,14 +21,14 @@ namespace DNS.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Movie", x => x.Id);
+                    table.PrimaryKey("PK_Ppl", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Movie");
+                name: "Ppl");
         }
     }
 }

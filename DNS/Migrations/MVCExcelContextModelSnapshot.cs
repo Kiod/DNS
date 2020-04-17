@@ -43,7 +43,7 @@ namespace DNS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Ppl");
                 });
 #pragma warning restore 612, 618
         }

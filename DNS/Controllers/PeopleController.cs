@@ -22,7 +22,7 @@ namespace DNS.Controllers
         // GET: People
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Peoples.ToListAsync());
+            return View(await _context.Ppl.ToListAsync());
         }
 
         // GET: People/Details/5
@@ -33,7 +33,7 @@ namespace DNS.Controllers
                 return NotFound();
             }
 
-            var people = await _context.Peoples
+            var people = await _context.Ppl
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (people == null)
             {
@@ -73,7 +73,7 @@ namespace DNS.Controllers
                 return NotFound();
             }
 
-            var people = await _context.Movie.FindAsync(id);
+            var people = await _context.Ppl.FindAsync(id);
             if (people == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace DNS.Controllers
                 return NotFound();
             }
 
-            var people = await _context.Movie
+            var people = await _context.Ppl
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (people == null)
             {
@@ -139,15 +139,15 @@ namespace DNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var people = await _context.Movie.FindAsync(id);
-            _context.Movie.Remove(people);
+            var people = await _context.Ppl.FindAsync(id);
+            _context.Ppl.Remove(people);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PeopleExists(int id)
         {
-            return _context.Movie.Any(e => e.Id == id);
+            return _context.Ppl.Any(e => e.Id == id);
         }
     }
 }

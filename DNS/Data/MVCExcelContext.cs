@@ -14,6 +14,6 @@ namespace DNS.Data
         {
         }
 
-        public DbSet<People> Peoples { get; set; }
+        public DbSet<People> Ppl { get; set; }
     }
 }

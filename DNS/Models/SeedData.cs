@@ -17,12 +17,12 @@ namespace DNS.Models
                     DbContextOptions<MVCExcelContext>>()))
             {
                 // Look for any movies.
-                if (context.Peoples.Any())
+                if (context.Ppl.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                context.Peoples.AddRange(
+                context.Ppl.AddRange(
                     new People
                     {
                         Name = "Harry",

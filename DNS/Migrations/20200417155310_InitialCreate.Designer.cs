@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DNS.Migrations
 {
     [DbContext(typeof(MVCExcelContext))]
-    [Migration("20200417150025_InitialCreate")]
+    [Migration("20200417155310_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,7 @@ namespace DNS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Ppl");
                 });
 #pragma warning restore 612, 618
         }
