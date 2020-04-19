@@ -21,6 +21,7 @@ namespace DNS.Controllers
         {
             ViewData["Message"] = "Hello " + name;
             ViewData["NumTimes"] = numTimes;
+            
 
             return View();
         }

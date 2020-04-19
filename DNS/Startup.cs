@@ -28,6 +28,7 @@ namespace DNS
             services.AddControllersWithViews();
             services.AddDbContext<MVCExcelContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MVCExcelContext")));
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

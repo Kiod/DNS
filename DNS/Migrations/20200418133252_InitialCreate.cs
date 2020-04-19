@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DNS.Migrations
 {
@@ -15,7 +14,8 @@ namespace DNS.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    ReleaseDate = table.Column<DateTime>(nullable: false),
+                    MiddleName = table.Column<string>(nullable: true),
+                    Departmen = table.Column<string>(nullable: true),
                     Position = table.Column<string>(nullable: true),
                     Age = table.Column<int>(nullable: false)
                 },

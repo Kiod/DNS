@@ -54,7 +54,7 @@ namespace DNS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,LastName,ReleaseDate,Position,Age")] People people)
+        public async Task<IActionResult> Create([Bind("Id,Name,LastName,MiddleName,Departmen,Position,Boss,Age")] People people)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace DNS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,LastName,ReleaseDate,Position,Age")] People people)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,LastName,MiddleName,Departmen,Position,Boss,Age")] People people)
         {
             if (id != people.Id)
             {

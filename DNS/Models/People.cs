@@ -11,10 +11,10 @@ namespace DNS.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
+        public string MiddleName { get; set; }
+        public string Departmen { get; set; }
         public string Position { get; set; }
+        public string Boss { get; set; }
         public int Age { get; set; }
     }
 }

@@ -3,14 +3,16 @@ using DNS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DNS.Migrations
 {
     [DbContext(typeof(MVCExcelContext))]
-    partial class MVCExcelContextModelSnapshot : ModelSnapshot
+    [Migration("20200418133252_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,9 +29,6 @@ namespace DNS.Migrations
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
-
-                    b.Property<string>("Boss")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Departmen")
                         .HasColumnType("nvarchar(max)");
